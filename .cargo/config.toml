@@ -1,0 +1,3 @@
+[env]
+DEP_LV_CONFIG_PATH = { value = "crates/initium-gui/lvgl", relative = true }
+C_INCLUDE_PATH = "/usr/include/libdrm"

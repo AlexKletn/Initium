@@ -1,2 +1,6 @@
 /target/
+/src/
+/pkg/
+/*.pkg.tar.*
 /NOTES.local.md
+/initium-*.tar.gz

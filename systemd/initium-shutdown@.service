@@ -1,0 +1,16 @@
+[Unit]
+Description=Initium shutdown splash (%i)
+DefaultDependencies=no
+After=display-manager.service
+Before=shutdown.target umount.target systemd-poweroff.service systemd-reboot.service
+ConditionPathExists=/usr/lib/initium/initium-shutdown
+ConditionPathExists=/etc/initium/shutdown.toml
+
+[Service]
+Type=oneshot
+Slice=system.slice
+ExecStart=-/usr/lib/initium/initium-shutdown /etc/initium/shutdown.toml %i
+TimeoutStartSec=3s
+
+[Install]
+WantedBy=%i.target

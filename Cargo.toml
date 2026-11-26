@@ -1,6 +1,11 @@
 [workspace]
 resolver = "3"
-members = ["crates/initium"]
+members = [
+    "crates/initium",
+    "crates/initium-config",
+    "crates/initium-flow",
+    "crates/initium-gui",
+]
 
 [workspace.package]
 edition = "2024"

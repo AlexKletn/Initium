@@ -1,0 +1,15 @@
+[Unit]
+Description=Blank the display backlight at shutdown
+DefaultDependencies=no
+After=final.target
+Before=systemd-poweroff.service systemd-reboot.service
+ConditionPathExists=/usr/lib/initium/initium-shutdown
+ConditionPathExists=/etc/initium/shutdown.toml
+
+[Service]
+Type=oneshot
+ExecStart=-/usr/lib/initium/initium-shutdown /etc/initium/shutdown.toml --blank
+TimeoutStartSec=2s
+
+[Install]
+WantedBy=poweroff.target reboot.target

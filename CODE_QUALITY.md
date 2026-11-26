@@ -1,4 +1,6 @@
-# Соглашение о качестве кода
+# Code quality agreement
+
+[Русская версия](CODE_QUALITY.ru.md)
 
 - **One entity per file.** Keep a type with its implementations, methods, and internal helpers. Give an independent type, state, resource owner, or handler with its own responsibility a separate file.
 - Put tests in a separate `<name>.tests.<ext>` file next to `<name>.<ext>`.
